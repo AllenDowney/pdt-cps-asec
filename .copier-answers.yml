@@ -1,0 +1,26 @@
+# Changes here will be overwritten by Copier; do not edit by hand.
+_commit: v0.1.0
+_src_path: /home/downey/PublicDataToolkit
+citation: U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Population
+    Survey, Annual Social and Economic Supplement (CPS ASEC), public-use file, <year>,
+    <https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html>, accessed
+    on <date>.
+dataset_id: cps-asec
+dataset_url: https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html
+description: 'The March supplement to the monthly Current Population Survey, conducted
+    by the Census Bureau for the Bureau of Labor Statistics: income, poverty, work
+    experience, health insurance and living arrangements of the US civilian noninstitutional
+    population.'
+form_label: ''
+publisher_name: U.S. Census Bureau (for the Bureau of Labor Statistics)
+publisher_url: https://www.census.gov/
+release_id: '2024'
+release_label: CPS ASEC 2024 public-use file
+source_format: csv
+source_id: cps-asec-2024-csv
+source_kind: data
+source_url: https://www2.census.gov/programs-surveys/cps/datasets/2024/march/asecpub24csv.zip
+standard_version: '0.1'
+terms_url: https://www.census.gov/about/policies.html
+title: Current Population Survey, Annual Social and Economic Supplement (CPS ASEC)
+wave_label: survey year

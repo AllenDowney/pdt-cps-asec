@@ -1,0 +1,17 @@
+# Every file this repo depends on (STANDARD.md §2.2): data files, codebooks,
+# questionnaires, release notes, errata and terms pages, upstream packages.
+# Schema: PublicDataToolkit/schema/sources.schema.json. Edited by hand.
+#
+# Once a file is fetched, fill fetched_on, bytes and sha256 (pdt check C6).
+# An upstream package also needs `version` (a tag or commit), and documentation
+# says which releases it `documents`.
+sources:
+  - id: cps-asec-2024-csv
+    title: "CPS ASEC 2024 public-use file, data"
+    kind: data
+    format: csv
+    url: "https://www2.census.gov/programs-surveys/cps/datasets/2024/march/asecpub24csv.zip"
+    path: data/raw/CHANGE-ME
+    releases: ["2024"]
+    redistribution: unknown
+    acquisition: automated

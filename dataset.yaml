@@ -1,0 +1,32 @@
+# The dataset, its terms and its releases (STANDARD.md §2.1, §8).
+# Schema: PublicDataToolkit/schema/dataset.schema.json. Edited by hand.
+standard_version: "0.1"
+id: cps-asec
+title: "Current Population Survey, Annual Social and Economic Supplement (CPS ASEC)"
+publisher:
+  name: "U.S. Census Bureau (for the Bureau of Labor Statistics)"
+  url: "https://www.census.gov/"
+url: "https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html"
+description: "The March supplement to the monthly Current Population Survey, conducted by the Census Bureau for the Bureau of Labor Statistics: income, poverty, work experience, health insurance and living arrangements of the US civilian noninstitutional population."
+citation: "U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Population Survey, Annual Social and Economic Supplement (CPS ASEC), public-use file, \u003cyear\u003e, \u003chttps://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html\u003e, accessed on \u003cdate\u003e."
+# Terms are decided by a person, never by an agent or this template (STANDARD.md §8).
+# Quote what the terms pages say in `summary`, then have a person set each field
+# to ship or build-only and fill reviewed_by and reviewed_on. `unknown` blocks
+# shipping anything that depends on it.
+terms:
+  url: "https://www.census.gov/about/policies.html"
+  summary: Not yet reviewed.
+  data: unknown
+  documentation: unknown
+  metadata: unknown
+  llm_processing: unknown
+dimensions:
+  wave:
+    label: "survey year"
+releases:
+  - id: "2024"
+    label: "CPS ASEC 2024 public-use file"
+    status: current
+    sources: [cps-asec-2024-csv]
+    # A release with several data files lists `tables`, each with an id, label,
+    # sources, key and references (STANDARD.md §2.1). Examples: pdt-nsfg, pdt-fars.
