@@ -16,15 +16,18 @@ citation: "U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Popul
 # shipping anything that depends on it.
 terms:
   url: https://www.census.gov/about/policies.html
-  summary: 'Not yet reviewed by a person. What the sources say: the public-use files are federal works
+  summary: 'Allen Downey decided on 2026-11-19 that data, documentation and metadata ship and that LLM processing is allowed, with a Census Bureau credit as the notice. Users must still not try to identify any person or household. What the sources say: the public-use files are federal works
     (17 U.S.C. 105), and the ASEC pages state no restriction on use or redistribution. Census''s terms
     for its data API (https://www.census.gov/data/developers/about/terms-of-service.html) carry the Title
     13 obligations: don''t use the data to identify any person or household, don''t link it with other
     data to identify anyone, and report an inadvertent identification. Citation: https://www.census.gov/about/policies/citation.html.'
-  data: unknown
-  documentation: unknown
-  metadata: unknown
-  llm_processing: unknown
+  notice: 'Source: U.S. Census Bureau, Current Population Survey, Annual Social and Economic Supplement, public-use files. Conclusions drawn from these data are the user''s own responsibility.'
+  data: ship
+  documentation: ship
+  metadata: ship
+  llm_processing: allowed
+  reviewed_by: Allen Downey
+  reviewed_on: '2026-11-19'
 dimensions:
   wave:
     label: ASEC year

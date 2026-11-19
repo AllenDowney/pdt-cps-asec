@@ -10,7 +10,7 @@ sources:
   path: data/raw/2019/asecpub19csv.zip
   releases:
   - '2019'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 88d8688ac5e5a1d4d4bd9daf72946d8fd34edda9360b3bbfde602d6ca55fb604
@@ -25,7 +25,7 @@ sources:
   path: data/raw/2019/06_ASEC_2019-Data_Dictionary_Full.pdf
   releases:
   - '2019'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 08637746cf98e2ec9a77bb828c353e8b3b8053c8fa9c5e91bfa4bea70352c7f0
@@ -38,7 +38,7 @@ sources:
   path: data/raw/2019/cpsmar19.pdf
   releases:
   - '2019'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: b51ac569e746b72dc8f1341d6488c567aafc68f1f66d5893fad105d115473382
@@ -51,7 +51,7 @@ sources:
   path: data/raw/2020/asecpub20csv.zip
   releases:
   - '2020'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: f79430c5664745a2ae1c0f7fef615d93fa6b1933d0fe1dabb932ec52c73be591
@@ -66,7 +66,7 @@ sources:
   path: data/raw/2020/ASEC2020ddl_pub_full.pdf
   releases:
   - '2020'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: c255850c37edefcc1c72b92c3a47949aa7292fe20adff85b5150daeb7bed12fc
@@ -79,7 +79,7 @@ sources:
   path: data/raw/2020/cpsmar20.pdf
   releases:
   - '2020'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: baaace3ae6f90e71bf53670afe4e417c27c45e3fc46db9def70d04b2885fd393
@@ -92,7 +92,7 @@ sources:
   path: data/raw/2021/asecpub21csv.zip
   releases:
   - '2021'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 7196ff49c52f833f65c537d66a0c8cc1540a8e31711a09c3730c218b4486c1f4
@@ -107,7 +107,7 @@ sources:
   path: data/raw/2021/asec2021_ddl_pub_full.pdf
   releases:
   - '2021'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 5a3511e7945fe10e9c9177093665a659ab8b843d557075c7065d29c04b56b045
@@ -120,7 +120,7 @@ sources:
   path: data/raw/2021/cpsmar21.pdf
   releases:
   - '2021'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 6ceb33c160cec9ae8ddbe4fa39d4f96b82044c7e37f70a082824d0edce9af359
@@ -133,7 +133,7 @@ sources:
   path: data/raw/2022/asecpub22csv.zip
   releases:
   - '2022'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 7338011adefca16dae30a4469ddaf0c01cef579b607b26b4bceec749376e4ac9
@@ -148,7 +148,7 @@ sources:
   path: data/raw/2022/asec2022_ddl_pub_full.pdf
   releases:
   - '2022'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 77622b19e77a24e8f5f6145fcb171ab856a2d438fda0ba1e04e7ce345b9f2428
@@ -161,7 +161,7 @@ sources:
   path: data/raw/2022/cpsmar22.pdf
   releases:
   - '2022'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: be2c5ac7c8db3b55c7a6737baf3b6e37b9455e25834a48cfc801b8b7aca25ede
@@ -174,7 +174,7 @@ sources:
   path: data/raw/2023/asecpub23csv.zip
   releases:
   - '2023'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: d2e000250782adfbdd7f29c82b66d866591a30f0d330496698ec19f9c784ce11
@@ -189,7 +189,7 @@ sources:
   path: data/raw/2023/asec2023_ddl_pub_full.pdf
   releases:
   - '2023'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 66bd6e3fe516233ab63b75c60573451222b3b3d3235d61cfed96f64608de2117
@@ -202,7 +202,7 @@ sources:
   path: data/raw/2023/cpsmar23.pdf
   releases:
   - '2023'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 54750c1c5257947f08a0941abac76803dd72e7db5a15b9883d64ffdd2278b42d
@@ -215,7 +215,7 @@ sources:
   path: data/raw/2024/asecpub24csv.zip
   releases:
   - '2024'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: cdb39cdac34bef99dd0940ab28e306f692404c2eea44d85dfd634214872a0a09
@@ -230,7 +230,7 @@ sources:
   path: data/raw/2024/asec2024_ddl_pub_full.pdf
   releases:
   - '2024'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 761c67ea53f5c3264329b3e9ddbdd802826ba4a859122b8a8a2f29ab85b3a840
@@ -243,7 +243,7 @@ sources:
   path: data/raw/2024/cpsmar24.pdf
   releases:
   - '2024'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 85ef535e227177193f8f83dfb03d8d667974d3ebaf9544147ec72a86db564c00
@@ -256,7 +256,7 @@ sources:
   path: data/raw/2025/asecpub25csv.zip
   releases:
   - '2025'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 318845a2b5e0034eb2973898de1738f4df0025727de38499e7669cb9c0deef0b
@@ -271,7 +271,7 @@ sources:
   path: data/raw/2025/asec2025_ddl_pub_full.pdf
   releases:
   - '2025'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 5cb80973326ef8b625fbaae70d80b0c641ce5d2b3911abd2fb4427abd5908a6f
@@ -284,7 +284,7 @@ sources:
   path: data/raw/2025/cpsmar25.pdf
   releases:
   - '2025'
-  redistribution: unknown
+  redistribution: ship
   acquisition: automated
   fetched_on: '2026-11-19'
   sha256: 7e6b689b3ad589148172f7ddf2921164f27b667ec38efd0ce962b842769181e1

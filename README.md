@@ -19,7 +19,9 @@ Weights have two implied decimals (MARSUPWT 255212 is 2552.12). The household fi
 
 ## Terms of use
 
-The terms are at https://www.census.gov/about/policies.html. They haven't been reviewed yet, so nothing built from this repo may ship (STANDARD.md §8). Once a person has decided them, summarize them here; the decision is in [`dataset.yaml`](dataset.yaml).
+The terms are at https://www.census.gov/about/policies.html. The public-use files are federal works. Allen Downey reviewed the terms on 2026-11-19: the data, documentation and metadata may ship, and the documentation may be processed by an LLM. Don't use the data to try to identify any person or household. The decision is in [`dataset.yaml`](dataset.yaml). Credit the source as Census asks:
+
+> Source: U.S. Census Bureau, Current Population Survey, Annual Social and Economic Supplement, public-use files. Conclusions drawn from these data are the user's own responsibility.
 
 ## How to get the data
 
