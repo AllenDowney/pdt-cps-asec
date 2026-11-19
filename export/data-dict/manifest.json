@@ -1,0 +1,95 @@
+{
+ "pdt_version": "0.1.0",
+ "inputs_sha256": "7ede9dc7b4f38cc03a145fd6221a7fc86009f3b0a3ff328f06a4cbddad1cbd6b",
+ "dataset": "cps-asec",
+ "spec": "0.1.0",
+ "files": [
+  "2019.yaml",
+  "2020.yaml",
+  "2021.yaml",
+  "2022.yaml",
+  "2023.yaml",
+  "2024.yaml",
+  "2025.yaml",
+  "LOSSES.md"
+ ],
+ "losses": {
+  "2019": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 4,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2020": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2021": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2022": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2023": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2024": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  },
+  "2025": {
+   "release_version": 1,
+   "variables": 32,
+   "availability": 32,
+   "provenance_fields": 183,
+   "missing_codes": 5,
+   "numeric_code_labels": 16,
+   "conditional_references": 2,
+   "links": 192,
+   "derived": 7
+  }
+ }
+}

@@ -14,19 +14,509 @@ citation: "U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Popul
 # to ship or build-only and fill reviewed_by and reviewed_on. `unknown` blocks
 # shipping anything that depends on it.
 terms:
-  url: "https://www.census.gov/about/policies.html"
-  summary: Not yet reviewed.
+  url: https://www.census.gov/about/policies.html
+  summary: 'Not yet reviewed by a person. What the sources say: the public-use files are federal works
+    (17 U.S.C. 105), and the ASEC pages state no restriction on use or redistribution. Census''s terms
+    for its data API (https://www.census.gov/data/developers/about/terms-of-service.html) carry the Title
+    13 obligations: don''t use the data to identify any person or household, don''t link it with other
+    data to identify anyone, and report an inadvertent identification. Citation: https://www.census.gov/about/policies/citation.html.'
   data: unknown
   documentation: unknown
   metadata: unknown
   llm_processing: unknown
 dimensions:
   wave:
-    label: "survey year"
+    label: ASEC year
+    note: Each release is one ASEC year. Income, poverty and work experience refer to the calendar year
+      before it (the 2024 ASEC asks about 2023).
 releases:
-  - id: "2024"
-    label: "CPS ASEC 2024 public-use file"
-    status: current
-    sources: [cps-asec-2024-csv]
-    # A release with several data files lists `tables`, each with an id, label,
-    # sources, key and references (STANDARD.md §2.1). Examples: pdt-nsfg, pdt-fars.
+- id: '2019'
+  label: CPS ASEC 2019 public-use file (income in 2018)
+  status: current
+  sources:
+  - cps-asec-2019-csv
+  - cps-asec-2019-dictionary
+  - cps-asec-2019-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2019-csv
+    - cps-asec-2019-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2019-csv
+    - cps-asec-2019-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2019-csv
+    - cps-asec-2019-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2020'
+  label: CPS ASEC 2020 public-use file (income in 2019)
+  status: current
+  sources:
+  - cps-asec-2020-csv
+  - cps-asec-2020-dictionary
+  - cps-asec-2020-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2020-csv
+    - cps-asec-2020-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2020-csv
+    - cps-asec-2020-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2020-csv
+    - cps-asec-2020-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2021'
+  label: CPS ASEC 2021 public-use file (income in 2020)
+  status: current
+  sources:
+  - cps-asec-2021-csv
+  - cps-asec-2021-dictionary
+  - cps-asec-2021-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2021-csv
+    - cps-asec-2021-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2021-csv
+    - cps-asec-2021-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2021-csv
+    - cps-asec-2021-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2022'
+  label: CPS ASEC 2022 public-use file (income in 2021)
+  status: current
+  sources:
+  - cps-asec-2022-csv
+  - cps-asec-2022-dictionary
+  - cps-asec-2022-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2022-csv
+    - cps-asec-2022-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2022-csv
+    - cps-asec-2022-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2022-csv
+    - cps-asec-2022-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2023'
+  label: CPS ASEC 2023 public-use file (income in 2022)
+  status: current
+  sources:
+  - cps-asec-2023-csv
+  - cps-asec-2023-dictionary
+  - cps-asec-2023-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2023-csv
+    - cps-asec-2023-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2023-csv
+    - cps-asec-2023-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2023-csv
+    - cps-asec-2023-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2024'
+  label: CPS ASEC 2024 public-use file (income in 2023)
+  status: current
+  sources:
+  - cps-asec-2024-csv
+  - cps-asec-2024-dictionary
+  - cps-asec-2024-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2024-csv
+    - cps-asec-2024-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2024-csv
+    - cps-asec-2024-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2024-csv
+    - cps-asec-2024-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+- id: '2025'
+  label: CPS ASEC 2025 public-use file (income in 2024)
+  status: current
+  sources:
+  - cps-asec-2025-csv
+  - cps-asec-2025-dictionary
+  - cps-asec-2025-techdoc
+  tables:
+  - id: household
+    label: Household records
+    sources:
+    - cps-asec-2025-csv
+    - cps-asec-2025-dictionary
+    key:
+    - H_SEQ
+  - id: family
+    label: Family records
+    sources:
+    - cps-asec-2025-csv
+    - cps-asec-2025-dictionary
+    key:
+    - FH_SEQ
+    - FFPOS
+    references:
+    - columns:
+      - FH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+  - id: person
+    label: Person records
+    sources:
+    - cps-asec-2025-csv
+    - cps-asec-2025-dictionary
+    key:
+    - PH_SEQ
+    - P_SEQ
+    references:
+    - columns:
+      - PH_SEQ
+      table: household
+      target_columns:
+      - H_SEQ
+    - columns:
+      - PH_SEQ
+      - PF_SEQ
+      table: family
+      target_columns:
+      - FH_SEQ
+      - FFPOS
+    - columns:
+      - PH_SEQ
+      - PEPAR1
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR1
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    - columns:
+      - PH_SEQ
+      - PEPAR2
+      table: person
+      target_columns:
+      - PH_SEQ
+      - A_LINENO
+      when:
+        column: PEPAR2
+        in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]

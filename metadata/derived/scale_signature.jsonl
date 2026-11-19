@@ -1,0 +1,7 @@
+{"target": {"release": "2019", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2020", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2021", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2022", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2023", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2024", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}
+{"target": {"release": "2025", "table": "person", "variable": "PEHSPNON"}, "property": "scale_signature", "value": "yes_no", "rule": "scale_signature_from_valid_labels", "rule_version": "0.2"}

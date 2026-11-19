@@ -8,3 +8,8 @@ Current Population Survey, Annual Social and Economic Supplement (CPS ASEC) meta
 - `data/` is gitignored and never committed.
 - Run `make build`, `make views`, then `make check`. Read `build/report.md` after every build.
 - Terms questions go to a person; don't decide them.
+- Releases are ASEC years, 2019–2025, each with household, family and person tables (`dataset.yaml`). Income refers to the year before the ASEC year.
+- The data dictionaries are two-column PDFs; `build/census_dictionary.py` converts each half page separately and caches the text in `data/interim/dictionary/`. Values printed in words ("negative amt = income (loss)"), "Min Value"/"Max Value" pairs and "1 hour ... 99 = 99 hours plus" become `valid_range`, with the labels in its note (rule `cps_dictionary_values` in `build/build_records.py`).
+- Census doesn't mark missing codes; rule `cps_missing_from_labels` types "NIU"/"Not in universe" as `inap` and "Noninterview household" as `not_asked`.
+- Links between consecutive years come from rule `cps_identical_dictionary`; Census has no crosswalk. `RELEASES=2024,2025 make build` builds some years only.
+- Weights have two implied decimals (MARSUPWT 255212 is 2552.12); the CSVs keep the scaled integers.

@@ -1,9 +1,67 @@
-# The variables to build, and facts the sources don't give (origin: hand).
-# Edited by hand; read by build/build_records.py.
-release: "2024"
-# Start with 30-50 variables that include the hard cases: a battery, an item
-# asked on only some forms, several wordings, several kinds of missing codes,
-# and anything the publisher has corrected (instructions/03-parse-documentation.md).
-variables: {}
-#  name:
-#    measure: categorical   # categorical, ordinal, continuous, count, identifier, weight, text, date
+# The CPS ASEC slice (PublicDataToolkit Task 32): the variables to build, and facts
+# the sources don't give (origin: hand). Edited by hand; read by build/build_records.py.
+#
+# Releases are ASEC years. 2019 is the first year Census published the split CSV
+# files (one each for household, family and person records); earlier years are
+# one hierarchical fixed-width file. Income refers to the calendar year before
+# the ASEC year.
+
+author: Claude (PublicDataToolkit Task 32) for Allen Downey
+date: "2026-11-19"
+
+releases: ["2019", "2020", "2021", "2022", "2023", "2024", "2025"]
+
+# Each year's data dictionary, under data/raw/<year>/; the names vary.
+dictionary:
+  "2019": 06_ASEC_2019-Data_Dictionary_Full.pdf
+  "2020": ASEC2020ddl_pub_full.pdf
+  "2021": asec2021_ddl_pub_full.pdf
+  "2022": asec2022_ddl_pub_full.pdf
+  "2023": asec2023_ddl_pub_full.pdf
+  "2024": asec2024_ddl_pub_full.pdf
+  "2025": asec2025_ddl_pub_full.pdf
+
+# Tables: the CSV member in asecpubYYcsv.zip ({yy} is the year's last two
+# digits), and each variable's measure (hand).
+tables:
+  household:
+    member: "hhpub{yy}.csv"
+    variables:
+      H_SEQ: identifier
+      H_YEAR: categorical
+      GESTFIPS: categorical
+      HSUP_WGT: weight
+      H_NUMPER: count
+      HTOTVAL: continuous
+  family:
+    member: "ffpub{yy}.csv"
+    variables:
+      FH_SEQ: identifier
+      FFPOS: identifier
+      FKIND: categorical
+      FPERSONS: count
+      FTOTVAL: continuous
+      FPOVCUT: continuous
+      FSUP_WGT: weight
+  person:
+    member: "pppub{yy}.csv"
+    variables:
+      PH_SEQ: identifier
+      P_SEQ: identifier
+      PF_SEQ: identifier
+      A_LINENO: identifier
+      MARSUPWT: weight
+      A_AGE: continuous
+      A_SEX: categorical
+      PRDTRACE: categorical
+      PEHSPNON: categorical
+      A_HGA: ordinal
+      A_MARITL: categorical
+      A_EXPRRP: categorical
+      PEPAR1: identifier
+      PEPAR2: identifier
+      PEMLR: categorical
+      HRSWK: continuous
+      PTOTVAL: continuous
+      PEARNVAL: continuous
+      PERLIS: ordinal

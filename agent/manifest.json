@@ -1,0 +1,780 @@
+{
+ "pdt_version": "0.1.0",
+ "inputs_sha256": "7ede9dc7b4f38cc03a145fd6221a7fc86009f3b0a3ff328f06a4cbddad1cbd6b",
+ "dataset": "cps-asec",
+ "max_tokens": 20000,
+ "shards": [
+  {
+   "kind": "table",
+   "title": "Release 2019, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2019/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2019",
+    "table": "household"
+   },
+   "releases": [
+    "2019"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2019-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2019-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2019, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2019/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2019",
+    "table": "family"
+   },
+   "releases": [
+    "2019"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2019-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1609
+    },
+    {
+     "path": "shards/table/2019-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 294
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2019, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2019/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2019",
+    "table": "person"
+   },
+   "releases": [
+    "2019"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2019-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4926
+    },
+    {
+     "path": "shards/table/2019-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2020, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2020/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2020",
+    "table": "household"
+   },
+   "releases": [
+    "2020"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2020-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2020-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2020, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2020/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2020",
+    "table": "family"
+   },
+   "releases": [
+    "2020"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2020-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1620
+    },
+    {
+     "path": "shards/table/2020-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2020, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2020/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2020",
+    "table": "person"
+   },
+   "releases": [
+    "2020"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2020-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2020-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2021, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2021/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2021",
+    "table": "household"
+   },
+   "releases": [
+    "2021"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2021-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2021-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2021, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2021/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2021",
+    "table": "family"
+   },
+   "releases": [
+    "2021"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2021-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1620
+    },
+    {
+     "path": "shards/table/2021-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2021, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2021/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2021",
+    "table": "person"
+   },
+   "releases": [
+    "2021"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2021-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2021-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2022, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2022/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2022",
+    "table": "household"
+   },
+   "releases": [
+    "2022"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2022-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2022-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2022, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2022/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2022",
+    "table": "family"
+   },
+   "releases": [
+    "2022"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2022-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1620
+    },
+    {
+     "path": "shards/table/2022-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2022, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2022/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2022",
+    "table": "person"
+   },
+   "releases": [
+    "2022"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2022-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2022-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2023, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2023/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2023",
+    "table": "household"
+   },
+   "releases": [
+    "2023"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2023-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2023-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2023, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2023/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2023",
+    "table": "family"
+   },
+   "releases": [
+    "2023"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2023-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1620
+    },
+    {
+     "path": "shards/table/2023-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2023, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2023/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2023",
+    "table": "person"
+   },
+   "releases": [
+    "2023"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2023-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2023-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2024, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2024/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2024",
+    "table": "household"
+   },
+   "releases": [
+    "2024"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2024-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1356
+    },
+    {
+     "path": "shards/table/2024-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2024, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2024/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2024",
+    "table": "family"
+   },
+   "releases": [
+    "2024"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2024-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1620
+    },
+    {
+     "path": "shards/table/2024-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2024, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2024/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2024",
+    "table": "person"
+   },
+   "releases": [
+    "2024"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2024-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2024-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2025, table household",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2025/household/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2025",
+    "table": "household"
+   },
+   "releases": [
+    "2025"
+   ],
+   "n_in_scope": 6,
+   "rule_versions": {},
+   "notes": [],
+   "count": 6,
+   "files": [
+    {
+     "path": "shards/table/2025-household.jsonl",
+     "form": "jsonl",
+     "variables": 6,
+     "tokens": 1357
+    },
+    {
+     "path": "shards/table/2025-household.txt",
+     "form": "txt",
+     "variables": 6,
+     "tokens": 229
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2025, table family",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2025/family/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2025",
+    "table": "family"
+   },
+   "releases": [
+    "2025"
+   ],
+   "n_in_scope": 7,
+   "rule_versions": {},
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/table/2025-family.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1618
+    },
+    {
+     "path": "shards/table/2025-family.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 295
+    }
+   ]
+  },
+  {
+   "kind": "table",
+   "title": "Release 2025, table person",
+   "basis": "every variable in the table",
+   "full_records": [
+    "metadata/releases/2025/person/variables.jsonl"
+   ],
+   "completeness": "complete",
+   "filter": {
+    "release": "2025",
+    "table": "person"
+   },
+   "releases": [
+    "2025"
+   ],
+   "n_in_scope": 19,
+   "rule_versions": {},
+   "notes": [],
+   "count": 19,
+   "files": [
+    {
+     "path": "shards/table/2025-person.jsonl",
+     "form": "jsonl",
+     "variables": 19,
+     "tokens": 4975
+    },
+    {
+     "path": "shards/table/2025-person.txt",
+     "form": "txt",
+     "variables": 19,
+     "tokens": 455
+    }
+   ]
+  },
+  {
+   "kind": "scale",
+   "title": "Scale signature: yes_no",
+   "basis": "variables with this scale signature in the current release (2019, 2020, 2021, 2022, 2023, 2024, 2025)",
+   "full_records": [
+    "metadata/releases/2019/person/variables.jsonl",
+    "metadata/releases/2020/person/variables.jsonl",
+    "metadata/releases/2021/person/variables.jsonl",
+    "metadata/releases/2022/person/variables.jsonl",
+    "metadata/releases/2023/person/variables.jsonl",
+    "metadata/releases/2024/person/variables.jsonl",
+    "metadata/releases/2025/person/variables.jsonl"
+   ],
+   "completeness": "complete_by_rule",
+   "filter": {
+    "release": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "derived": {
+     "scale_signature": "yes_no"
+    }
+   },
+   "releases": [
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "n_in_scope": 224,
+   "rule_versions": {
+    "scale_signature_from_valid_labels": "0.2"
+   },
+   "notes": [],
+   "count": 7,
+   "files": [
+    {
+     "path": "shards/scale/yes-no.jsonl",
+     "form": "jsonl",
+     "variables": 7,
+     "tokens": 1585
+    },
+    {
+     "path": "shards/scale/yes-no.txt",
+     "form": "txt",
+     "variables": 7,
+     "tokens": 321
+    }
+   ]
+  }
+ ]
+}

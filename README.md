@@ -2,13 +2,20 @@
 
 Metadata for the [Current Population Survey, Annual Social and Economic Supplement (CPS ASEC)](https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html), built to the [PublicDataToolkit](https://github.com/AllenDowney/PublicDataToolkit) standard.
 
-**Status:** started from the PublicDataToolkit template; no records yet.
+**Status:** a slice of 32 variables (household, family and person tables) for the ASEC years 2019–2025, built from Census's own public-use files and data dictionaries (PublicDataToolkit Task 32). Earlier years are one hierarchical fixed-width file and aren't covered yet.
 
 <!-- The sections below are required, in this order (STANDARD.md §2.3; pdt check C11). Replace each placeholder. -->
 
 ## What the dataset is
 
 The March supplement to the monthly Current Population Survey, conducted by the Census Bureau for the Bureau of Labor Statistics: income, poverty, work experience, health insurance and living arrangements of the US civilian noninstitutional population.
+
+Each release is one ASEC year. Income, poverty and work experience refer to the calendar year before it: the 2024 ASEC reports 2023 income. Two breaks matter for comparisons (technical documentation, `cpsmar25.pdf`, pp. 9–10):
+
+- **2014:** the income and health insurance questions were redesigned.
+- **2019:** an updated processing system starts with the 2019 ASEC (data year 2018), with new edits for same-sex couples and new editing and imputation of income and health insurance. Estimates from 2019 on aren't directly comparable with the 2017 and 2018 legacy files; the 2018 Bridge File and 2017 Research File connect them. 2019 is also the first year with separate CSV files, which is where this slice starts.
+
+Weights have two implied decimals (MARSUPWT 255212 is 2552.12). The household file includes noninterviewed households, which have no family or person records (H_NUMPER 0).
 
 ## Terms of use
 
@@ -33,7 +40,11 @@ U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Population Surve
 With the sources in `data/raw/` and a PublicDataToolkit checkout next to this repo:
 
 ```bash
+make download ARGS=--accept-terms   # about 1.1 GB from www2.census.gov
 make build
+make data
 make views
 make check
 ```
+
+`scripts/extract.py` writes an extract from the common-format files (`make data` first).

@@ -1,17 +1,291 @@
-# Every file this repo depends on (STANDARD.md §2.2): data files, codebooks,
-# questionnaires, release notes, errata and terms pages, upstream packages.
-# Schema: PublicDataToolkit/schema/sources.schema.json. Edited by hand.
-#
-# Once a file is fetched, fill fetched_on, bytes and sha256 (pdt check C6).
-# An upstream package also needs `version` (a tag or commit), and documentation
-# says which releases it `documents`.
+# Every file this repo depends on (STANDARD.md §2.2). Schema:
+# PublicDataToolkit/schema/sources.schema.json. Edited by hand; written once from the
+# downloaded files (fetched_on, sha256, bytes). Census serves these to scripts.
 sources:
-  - id: cps-asec-2024-csv
-    title: "CPS ASEC 2024 public-use file, data"
-    kind: data
-    format: csv
-    url: "https://www2.census.gov/programs-surveys/cps/datasets/2024/march/asecpub24csv.zip"
-    path: data/raw/CHANGE-ME
-    releases: ["2024"]
-    redistribution: unknown
-    acquisition: automated
+- id: cps-asec-2019-csv
+  title: CPS ASEC 2019 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2019/march/asecpub19csv.zip
+  path: data/raw/2019/asecpub19csv.zip
+  releases:
+  - '2019'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 88d8688ac5e5a1d4d4bd9daf72946d8fd34edda9360b3bbfde602d6ca55fb604
+  bytes: 183520738
+  note: A zip with hhpub19.csv, ffpub19.csv, pppub19.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2019-dictionary
+  title: CPS ASEC 2019 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2019/march/06_ASEC_2019-Data_Dictionary_Full.pdf
+  path: data/raw/2019/06_ASEC_2019-Data_Dictionary_Full.pdf
+  releases:
+  - '2019'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 08637746cf98e2ec9a77bb828c353e8b3b8053c8fa9c5e91bfa4bea70352c7f0
+  bytes: 619101
+- id: cps-asec-2019-techdoc
+  title: CPS ASEC 2019 technical documentation (cpsmar19)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar19.pdf
+  path: data/raw/2019/cpsmar19.pdf
+  releases:
+  - '2019'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: b51ac569e746b72dc8f1341d6488c567aafc68f1f66d5893fad105d115473382
+  bytes: 2464935
+- id: cps-asec-2020-csv
+  title: CPS ASEC 2020 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2020/march/asecpub20csv.zip
+  path: data/raw/2020/asecpub20csv.zip
+  releases:
+  - '2020'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: f79430c5664745a2ae1c0f7fef615d93fa6b1933d0fe1dabb932ec52c73be591
+  bytes: 162135125
+  note: A zip with hhpub20.csv, ffpub20.csv, pppub20.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2020-dictionary
+  title: CPS ASEC 2020 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2020/march/ASEC2020ddl_pub_full.pdf
+  path: data/raw/2020/ASEC2020ddl_pub_full.pdf
+  releases:
+  - '2020'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: c255850c37edefcc1c72b92c3a47949aa7292fe20adff85b5150daeb7bed12fc
+  bytes: 638141
+- id: cps-asec-2020-techdoc
+  title: CPS ASEC 2020 technical documentation (cpsmar20)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar20.pdf
+  path: data/raw/2020/cpsmar20.pdf
+  releases:
+  - '2020'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: baaace3ae6f90e71bf53670afe4e417c27c45e3fc46db9def70d04b2885fd393
+  bytes: 3562029
+- id: cps-asec-2021-csv
+  title: CPS ASEC 2021 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2021/march/asecpub21csv.zip
+  path: data/raw/2021/asecpub21csv.zip
+  releases:
+  - '2021'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 7196ff49c52f833f65c537d66a0c8cc1540a8e31711a09c3730c218b4486c1f4
+  bytes: 168518554
+  note: A zip with hhpub21.csv, ffpub21.csv, pppub21.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2021-dictionary
+  title: CPS ASEC 2021 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2021/march/asec2021_ddl_pub_full.pdf
+  path: data/raw/2021/asec2021_ddl_pub_full.pdf
+  releases:
+  - '2021'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 5a3511e7945fe10e9c9177093665a659ab8b843d557075c7065d29c04b56b045
+  bytes: 633907
+- id: cps-asec-2021-techdoc
+  title: CPS ASEC 2021 technical documentation (cpsmar21)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar21.pdf
+  path: data/raw/2021/cpsmar21.pdf
+  releases:
+  - '2021'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 6ceb33c160cec9ae8ddbe4fa39d4f96b82044c7e37f70a082824d0edce9af359
+  bytes: 3258902
+- id: cps-asec-2022-csv
+  title: CPS ASEC 2022 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2022/march/asecpub22csv.zip
+  path: data/raw/2022/asecpub22csv.zip
+  releases:
+  - '2022'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 7338011adefca16dae30a4469ddaf0c01cef579b607b26b4bceec749376e4ac9
+  bytes: 157679473
+  note: A zip with hhpub22.csv, ffpub22.csv, pppub22.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2022-dictionary
+  title: CPS ASEC 2022 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2022/march/asec2022_ddl_pub_full.pdf
+  path: data/raw/2022/asec2022_ddl_pub_full.pdf
+  releases:
+  - '2022'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 77622b19e77a24e8f5f6145fcb171ab856a2d438fda0ba1e04e7ce345b9f2428
+  bytes: 678520
+- id: cps-asec-2022-techdoc
+  title: CPS ASEC 2022 technical documentation (cpsmar22)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar22.pdf
+  path: data/raw/2022/cpsmar22.pdf
+  releases:
+  - '2022'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: be2c5ac7c8db3b55c7a6737baf3b6e37b9455e25834a48cfc801b8b7aca25ede
+  bytes: 3122435
+- id: cps-asec-2023-csv
+  title: CPS ASEC 2023 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2023/march/asecpub23csv.zip
+  path: data/raw/2023/asecpub23csv.zip
+  releases:
+  - '2023'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: d2e000250782adfbdd7f29c82b66d866591a30f0d330496698ec19f9c784ce11
+  bytes: 150165063
+  note: A zip with hhpub23.csv, ffpub23.csv, pppub23.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2023-dictionary
+  title: CPS ASEC 2023 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2023/march/asec2023_ddl_pub_full.pdf
+  path: data/raw/2023/asec2023_ddl_pub_full.pdf
+  releases:
+  - '2023'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 66bd6e3fe516233ab63b75c60573451222b3b3d3235d61cfed96f64608de2117
+  bytes: 781063
+- id: cps-asec-2023-techdoc
+  title: CPS ASEC 2023 technical documentation (cpsmar23)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar23.pdf
+  path: data/raw/2023/cpsmar23.pdf
+  releases:
+  - '2023'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 54750c1c5257947f08a0941abac76803dd72e7db5a15b9883d64ffdd2278b42d
+  bytes: 3692938
+- id: cps-asec-2024-csv
+  title: CPS ASEC 2024 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2024/march/asecpub24csv.zip
+  path: data/raw/2024/asecpub24csv.zip
+  releases:
+  - '2024'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: cdb39cdac34bef99dd0940ab28e306f692404c2eea44d85dfd634214872a0a09
+  bytes: 148664101
+  note: A zip with hhpub24.csv, ffpub24.csv, pppub24.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2024-dictionary
+  title: CPS ASEC 2024 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2024/march/asec2024_ddl_pub_full.pdf
+  path: data/raw/2024/asec2024_ddl_pub_full.pdf
+  releases:
+  - '2024'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 761c67ea53f5c3264329b3e9ddbdd802826ba4a859122b8a8a2f29ab85b3a840
+  bytes: 720396
+- id: cps-asec-2024-techdoc
+  title: CPS ASEC 2024 technical documentation (cpsmar24)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar24.pdf
+  path: data/raw/2024/cpsmar24.pdf
+  releases:
+  - '2024'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 85ef535e227177193f8f83dfb03d8d667974d3ebaf9544147ec72a86db564c00
+  bytes: 3507606
+- id: cps-asec-2025-csv
+  title: CPS ASEC 2025 public-use file, CSV (household, family and person files, and replicate weights)
+  kind: data
+  format: csv
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2025/march/asecpub25csv.zip
+  path: data/raw/2025/asecpub25csv.zip
+  releases:
+  - '2025'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 318845a2b5e0034eb2973898de1738f4df0025727de38499e7669cb9c0deef0b
+  bytes: 147271429
+  note: A zip with hhpub25.csv, ffpub25.csv, pppub25.csv and the replicate weights. Weights have 2 implied decimals
+    (MARSUPWT 255212 is 2552.12).
+- id: cps-asec-2025-dictionary
+  title: CPS ASEC 2025 public-use data dictionary
+  kind: codebook
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/datasets/2025/march/asec2025_ddl_pub_full.pdf
+  path: data/raw/2025/asec2025_ddl_pub_full.pdf
+  releases:
+  - '2025'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 5cb80973326ef8b625fbaae70d80b0c641ce5d2b3911abd2fb4427abd5908a6f
+  bytes: 1307738
+- id: cps-asec-2025-techdoc
+  title: CPS ASEC 2025 technical documentation (cpsmar25)
+  kind: other
+  format: pdf
+  url: https://www2.census.gov/programs-surveys/cps/techdocs/cpsmar25.pdf
+  path: data/raw/2025/cpsmar25.pdf
+  releases:
+  - '2025'
+  redistribution: unknown
+  acquisition: automated
+  fetched_on: '2026-11-19'
+  sha256: 7e6b689b3ad589148172f7ddf2921164f27b667ec38efd0ce962b842769181e1
+  bytes: 4010879
