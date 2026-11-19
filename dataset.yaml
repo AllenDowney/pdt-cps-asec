@@ -36,7 +36,8 @@ releases:
   reference_period:
     from: '2018-01-01'
     to: '2018-12-31'
-    note: Income, poverty and work experience are for calendar 2018; demographics and living arrangements are as of the 2019 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2018; demographics and living arrangements
+      are as of the 2019 interview (February-April).
   status: current
   sources:
   - cps-asec-2019-csv
@@ -50,6 +51,14 @@ releases:
     - cps-asec-2019-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2019.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar19.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -64,6 +73,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2019.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar19.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -105,12 +122,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2019.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar19.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2020'
   label: CPS ASEC 2020 public-use file (income in 2019)
   reference_period:
     from: '2019-01-01'
     to: '2019-12-31'
-    note: Income, poverty and work experience are for calendar 2019; demographics and living arrangements are as of the 2020 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2019; demographics and living arrangements
+      are as of the 2020 interview (February-April).
   status: current
   sources:
   - cps-asec-2020-csv
@@ -124,6 +150,14 @@ releases:
     - cps-asec-2020-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2020.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar20.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -138,6 +172,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2020.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar20.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -179,12 +221,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2020.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar20.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2021'
   label: CPS ASEC 2021 public-use file (income in 2020)
   reference_period:
     from: '2020-01-01'
     to: '2020-12-31'
-    note: Income, poverty and work experience are for calendar 2020; demographics and living arrangements are as of the 2021 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2020; demographics and living arrangements
+      are as of the 2021 interview (February-April).
   status: current
   sources:
   - cps-asec-2021-csv
@@ -198,6 +249,14 @@ releases:
     - cps-asec-2021-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2021.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar21.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -212,6 +271,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2021.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar21.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -253,12 +320,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2021.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar21.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2022'
   label: CPS ASEC 2022 public-use file (income in 2021)
   reference_period:
     from: '2021-01-01'
     to: '2021-12-31'
-    note: Income, poverty and work experience are for calendar 2021; demographics and living arrangements are as of the 2022 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2021; demographics and living arrangements
+      are as of the 2022 interview (February-April).
   status: current
   sources:
   - cps-asec-2022-csv
@@ -272,6 +348,14 @@ releases:
     - cps-asec-2022-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2022.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar22.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -286,6 +370,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2022.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar22.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -327,12 +419,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2022.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar22.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2023'
   label: CPS ASEC 2023 public-use file (income in 2022)
   reference_period:
     from: '2022-01-01'
     to: '2022-12-31'
-    note: Income, poverty and work experience are for calendar 2022; demographics and living arrangements are as of the 2023 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2022; demographics and living arrangements
+      are as of the 2023 interview (February-April).
   status: current
   sources:
   - cps-asec-2023-csv
@@ -346,6 +447,14 @@ releases:
     - cps-asec-2023-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2023.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar23.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -360,6 +469,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2023.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar23.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -401,12 +518,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2023.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar23.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2024'
   label: CPS ASEC 2024 public-use file (income in 2023)
   reference_period:
     from: '2023-01-01'
     to: '2023-12-31'
-    note: Income, poverty and work experience are for calendar 2023; demographics and living arrangements are as of the 2024 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2023; demographics and living arrangements
+      are as of the 2024 interview (February-April).
   status: current
   sources:
   - cps-asec-2024-csv
@@ -420,6 +546,14 @@ releases:
     - cps-asec-2024-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2024.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar24.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -434,6 +568,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2024.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar24.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -475,12 +617,21 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2024.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar24.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
 - id: '2025'
   label: CPS ASEC 2025 public-use file (income in 2024)
   reference_period:
     from: '2024-01-01'
     to: '2024-12-31'
-    note: Income, poverty and work experience are for calendar 2024; demographics and living arrangements are as of the 2025 interview (February-April).
+    note: Income, poverty and work experience are for calendar 2024; demographics and living arrangements
+      are as of the 2025 interview (February-April).
   status: current
   sources:
   - cps-asec-2025-csv
@@ -494,6 +645,14 @@ releases:
     - cps-asec-2025-dictionary
     key:
     - H_SEQ
+    design:
+      weights:
+      - HSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2025.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar25.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: family
     label: Family records
     sources:
@@ -508,6 +667,14 @@ releases:
       table: household
       target_columns:
       - H_SEQ
+    design:
+      weights:
+      - FSUP_WGT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2025.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar25.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
   - id: person
     label: Person records
     sources:
@@ -549,3 +716,11 @@ releases:
       when:
         column: PEPAR2
         in: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    design:
+      weights:
+      - MARSUPWT
+      note: 'The public-use file has no strata or PSU. For variance, Census releases 160 replicate weights
+        (pwwgt1-pwwgt160 in asec_csv_repwgt_2025.csv, in the same zip, matched to persons by h_seq and
+        PPPOS; not in this slice): var = 4/160 * sum of (replicate estimate - full-sample estimate)^2.
+        It also publishes generalized variance parameters (technical documentation cpsmar25.pdf, "Replicate
+        Weighting" and "Generalized Variance Parameters"). Weights have 2 implied decimals.'
