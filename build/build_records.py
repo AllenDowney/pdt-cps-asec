@@ -127,8 +127,10 @@ def dictionary_values(name, entry, source):
             minmax[label.strip().lower()] = code
             continue
         e = ELLIPSIS.match(label)
-        if e:  # "1 = 1 hour ... 99 = 99 hours plus"
+        if e:  # "1 = 1 hour ... 99 = 99 hours plus": a range, and its two labeled ends are values too
             ranges.append((code, number(e.group(2)), f"{token}: {e.group(1)} ... {e.group(2)}: {e.group(3)}"))
+            values.append({"code": code, "label": e.group(1).strip(), "kind": "valid"})
+            values.append({"code": number(e.group(2)), "label": e.group(3).strip(), "kind": "valid"})
             continue
         types = missing_types(label)
         if types:
@@ -165,12 +167,22 @@ def dictionary_values(name, entry, source):
 
 # ---------------------------------------------------------------- build
 
-def build_variable(name, table, release, entry, col, measure, spec):
+SAME_AS = re.compile(r"^Same as (\w+)$", re.I)
+FLAG_FOR = re.compile(r"Allocation flag for (\w+)\b")
+IMPLIED = re.compile(r"(\d+) implied decimal", re.I)
+
+
+def build_variable(name, table, release, entry, col, measure, spec, table_entries, table_names):
+    """One record. table_entries: this release's dictionary entries for the table; table_names: the
+    slice's names in the table (flag_for names only those)."""
     dd, dat = dictionary_source(release), data_source(release)
     hand = {"origin": "hand", "author": spec["author"], "date": spec["date"]}
     record = {"dataset": DATASET, "release": release, "table": table, "name": name}
     if entry["label"]:
         record["label"] = entry["label"]
+    same = SAME_AS.match(entry["values"][0][1]) if len(entry["values"]) == 1 and entry["values"][0][0] is None else None
+    if same and same.group(1) in table_entries:  # PXPAR2: "Same as PXPAR1"
+        entry = dict(entry, values=table_entries[same.group(1)]["values"])
     present = col.dropna()
     numbers = [float(x) for x in present]
     if numbers:
@@ -197,9 +209,28 @@ def build_variable(name, table, release, entry, col, measure, spec):
                                   "source": dat, "note": "integer if every value in the data is whole, else float."}
     if valid_range:
         fields["valid_range"] = {"origin": "rule", "rule": "cps_dictionary_values", "rule_version": RULE_VERSION, "source": dd}
+    if same:
+        fields["values"]["note"] = f"The entry says its codes are the same as {same.group(1)}'s; they're copied from there."
+    implied = next((IMPLIED.search(n) for n in notes if IMPLIED.search(n)), None)
+    if implied:  # "2 implied decimals (example: 255212=2552.12)"
+        record["implied_decimals"] = int(implied.group(1))
+        fields["implied_decimals"] = {"origin": "publisher", "source": dd, "location": f"{name}, Values"}
+    flag = FLAG_FOR.search(entry["label"])
+    if flag and flag.group(1) in table_names:
+        record["flag_for"] = [flag.group(1)]
+        record["variable_type"] = "imputation_flag"
+        for f in ("flag_for", "variable_type"):
+            fields[f] = {"origin": "rule", "rule": "cps_flag_from_label", "rule_version": RULE_VERSION, "source": dd,
+                         "note": "From the label, \"Allocation flag for <name>\"."}
+    q = spec.get("questions", {}).get(name)
+    if q:
+        question = {"text": q["text"]}
+        if entry.get("item"):
+            question["number"] = entry["item"]
+        record["questions"] = [question]
+        fields["questions"] = {"origin": "publisher", "source": f"cps-asec-{release}-techdoc", "location": q["location"],
+                               "note": "Quoted in the technical documentation; the item number is from the data dictionary's label."}
     record["provenance"] = {"record": {"origin": "publisher", "source": dd}, "fields": fields}
-    if entry.get("item"):
-        record["extensions"] = {"cps": {"item": entry["item"]}}
     return record
 
 
@@ -289,7 +320,8 @@ def main():
                 if entry is None:
                     notes.append(f"`{table}/{name}`: not in the {release} dictionary")
                     continue
-                rec = build_variable(name, table, release, entry, frame[name], t["variables"][name], spec)
+                rec = build_variable(name, table, release, entry, frame[name], t["variables"][name], spec,
+                                     dd.get(table, {}), names)
                 notes += check(rec, frame[name])
                 records.append(rec)
                 by_key[(release, table, name)] = rec

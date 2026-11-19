@@ -1,6 +1,6 @@
 {
  "pdt_version": "0.1.0",
- "inputs_sha256": "5a708c1f7951dbbb352e2b0174a0add808bccca26d4a931edd8dc3d71ba4f462",
+ "inputs_sha256": "c1936e4ca7b8615e8939ab1a4f7266a9af398107b3aaa04d664e8064fa84dc92",
  "dataset": "cps-asec",
  "max_tokens": 20000,
  "shards": [
@@ -28,7 +28,7 @@
      "path": "shards/table/2019-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2019-household.txt",
@@ -62,7 +62,7 @@
      "path": "shards/table/2019-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1609
+     "tokens": 1629
     },
     {
      "path": "shards/table/2019-family.txt",
@@ -87,22 +87,22 @@
    "releases": [
     "2019"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2019-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4926
+     "variables": 28,
+     "tokens": 8802
     },
     {
      "path": "shards/table/2019-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -130,7 +130,7 @@
      "path": "shards/table/2020-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2020-household.txt",
@@ -164,7 +164,7 @@
      "path": "shards/table/2020-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1620
+     "tokens": 1640
     },
     {
      "path": "shards/table/2020-family.txt",
@@ -189,22 +189,22 @@
    "releases": [
     "2020"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2020-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2020-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -232,7 +232,7 @@
      "path": "shards/table/2021-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2021-household.txt",
@@ -266,7 +266,7 @@
      "path": "shards/table/2021-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1620
+     "tokens": 1640
     },
     {
      "path": "shards/table/2021-family.txt",
@@ -291,22 +291,22 @@
    "releases": [
     "2021"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2021-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2021-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -334,7 +334,7 @@
      "path": "shards/table/2022-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2022-household.txt",
@@ -368,7 +368,7 @@
      "path": "shards/table/2022-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1620
+     "tokens": 1640
     },
     {
      "path": "shards/table/2022-family.txt",
@@ -393,22 +393,22 @@
    "releases": [
     "2022"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2022-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2022-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -436,7 +436,7 @@
      "path": "shards/table/2023-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2023-household.txt",
@@ -470,7 +470,7 @@
      "path": "shards/table/2023-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1620
+     "tokens": 1640
     },
     {
      "path": "shards/table/2023-family.txt",
@@ -495,22 +495,22 @@
    "releases": [
     "2023"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2023-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2023-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -538,7 +538,7 @@
      "path": "shards/table/2024-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1356
+     "tokens": 1376
     },
     {
      "path": "shards/table/2024-household.txt",
@@ -572,7 +572,7 @@
      "path": "shards/table/2024-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1620
+     "tokens": 1640
     },
     {
      "path": "shards/table/2024-family.txt",
@@ -597,22 +597,22 @@
    "releases": [
     "2024"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2024-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2024-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -640,7 +640,7 @@
      "path": "shards/table/2025-household.jsonl",
      "form": "jsonl",
      "variables": 6,
-     "tokens": 1357
+     "tokens": 1377
     },
     {
      "path": "shards/table/2025-household.txt",
@@ -674,7 +674,7 @@
      "path": "shards/table/2025-family.jsonl",
      "form": "jsonl",
      "variables": 7,
-     "tokens": 1618
+     "tokens": 1638
     },
     {
      "path": "shards/table/2025-family.txt",
@@ -699,22 +699,22 @@
    "releases": [
     "2025"
    ],
-   "n_in_scope": 19,
+   "n_in_scope": 28,
    "rule_versions": {},
    "notes": [],
-   "count": 19,
+   "count": 28,
    "files": [
     {
      "path": "shards/table/2025-person.jsonl",
      "form": "jsonl",
-     "variables": 19,
-     "tokens": 4975
+     "variables": 28,
+     "tokens": 8851
     },
     {
      "path": "shards/table/2025-person.txt",
      "form": "txt",
-     "variables": 19,
-     "tokens": 455
+     "variables": 28,
+     "tokens": 624
     }
    ]
   },
@@ -755,7 +755,7 @@
     "2024",
     "2025"
    ],
-   "n_in_scope": 224,
+   "n_in_scope": 287,
    "rule_versions": {
     "scale_signature_from_valid_labels": "0.2"
    },

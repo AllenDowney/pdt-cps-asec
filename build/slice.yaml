@@ -65,3 +65,21 @@ tables:
       PTOTVAL: continuous
       PEARNVAL: continuous
       PERLIS: ordinal
+      # Allocation flags for the variables above (the dictionary's "Allocation flag for X";
+      # the build sets flag_for from the label). The income totals have no flags of their own.
+      AXAGE: categorical
+      AXSEX: categorical
+      AXHGA: categorical
+      PXRACE1: categorical
+      PXHSPNON: categorical
+      PXMARITL: categorical
+      PXPAR1: categorical
+      PXPAR2: categorical
+      I_HRSWK: categorical
+
+# Question text the dictionaries don't give, quoted from each year's technical
+# documentation (cpsmarYY.pdf). The item number comes from the dictionary's label.
+questions:
+  A_HGA:
+    text: "What is the highest level of school ... has completed or the highest degree ... has received?"
+    location: "Glossary, \"Level of School Completed/Degree Received\""
