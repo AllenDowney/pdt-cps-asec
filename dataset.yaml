@@ -2,6 +2,7 @@
 # Schema: PublicDataToolkit/schema/dataset.schema.json. Edited by hand.
 standard_version: "0.1"
 id: cps-asec
+kind: survey   # STANDARD.md §2.1: survey, administrative or portal
 title: "Current Population Survey, Annual Social and Economic Supplement (CPS ASEC)"
 publisher:
   name: "U.S. Census Bureau (for the Bureau of Labor Statistics)"
