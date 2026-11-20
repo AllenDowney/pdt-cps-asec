@@ -49,7 +49,14 @@ make views
 make check
 ```
 
-`scripts/extract.py` writes an extract from the common-format files (`make data` first).
+`scripts/extract.py` writes an extract from the common-format files (`make data` first), for example:
+
+```bash
+python scripts/extract.py --release 2024 --table person --vars A_AGE,PEPAR1,PEPAR2,PTOTVAL,MARSUPWT \
+    --out persons.csv
+```
+
+`python scripts/extract.py --help` lists the releases and tables and the options.
 
 The metadata tools (`make views`, `make check`) need only the toolkit's base install
 (`pip install -e ../PublicDataToolkit`). Building or reading the data files (`make data`,
