@@ -1,10 +1,11 @@
 # Changes here will be overwritten by Copier; do not edit by hand.
-_commit: v0.1.0
+_commit: v0.2.0
 _src_path: /home/downey/PublicDataToolkit
 citation: U.S. Census Bureau and U.S. Bureau of Labor Statistics, Current Population
     Survey, Annual Social and Economic Supplement (CPS ASEC), public-use file, <year>,
     <https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html>, accessed
     on <date>.
+copyright_holder: Allen Downey
 dataset_id: cps-asec
 dataset_url: https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html
 description: 'The March supplement to the monthly Current Population Survey, conducted
