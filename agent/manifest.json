@@ -1,6 +1,7 @@
 {
  "pdt_version": "0.1.0",
  "inputs_sha256": "1e64e6d89e6402f14429e0a651cc77fe34f7f9d875c80f9894f58bfe549720c5",
+ "generator_sha256": "9ccfde4fa108cb2b4d7e1cdf675082febafe78bc8e89a2be78db6a98e3a26059",
  "dataset": "cps-asec",
  "max_tokens": 20000,
  "shards": [
@@ -777,6 +778,7 @@
    ]
   }
  ],
+ "release_shards": 12,
  "across_releases": [
   {
    "path": "variables.txt",
