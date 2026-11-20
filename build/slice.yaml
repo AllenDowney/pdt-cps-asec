@@ -6,7 +6,7 @@
 # one hierarchical fixed-width file. Income refers to the calendar year before
 # the ASEC year.
 
-author: Claude (PublicDataToolkit Task 32) for Allen Downey
+author: Claude (PublicDataToolkit Task 32)
 date: "2026-11-19"
 
 releases: ["2019", "2020", "2021", "2022", "2023", "2024", "2025"]
